@@ -17,6 +17,6 @@ code {
     monospace;
 }
 
-p, label {
+p, label, table {
   font-size:9px
 }

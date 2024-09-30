@@ -418,6 +418,266 @@ function App() {
           </div>
 
 
+          <div className="flex border-2">
+
+            <div className="relative flex flex-col border-b-2">
+
+              <div className="relative flex-1 p-1">
+                <input
+                  id="input13"
+                  type="text"
+                  name="input13"
+                  value={formData.input13}
+                  onChange={handleChange}
+                  className="w-full mt-3 focus:outline-none"
+                // required
+                />
+                <label
+                  htmlFor="input13"
+                  className="flex flex-col w-full absolute left-1 top-1.5 text-xs">
+                  <p>13. Указания на превозвача</p>
+                  <p className='ml-3'>Sender`s instructions</p>
+                </label>
+              </div>
+
+              <div className="relative flex-2 h-[70px] border-t-2">
+                <input
+                  id="input14"
+                  type="text"
+                  name="input14"
+                  value={formData.input14}
+                  onChange={handleChange}
+                  className=" w-full mt-3 focus:outline-none"
+                // required
+                />
+                <label
+                  htmlFor="input14"
+                  className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+                >
+                  <p>14. Предписания за плащане на навло / Instructions as to payments for carrage</p>
+
+                </label>
+                <div className="flex flex-col mt-1.5">
+                  <div className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id="checkbox1"
+                      name="checkbox1"
+                      className="mr-2"
+                    // onChange={handleCheckboxChange} 
+                    />
+                    <label htmlFor="checkbox1" className="">Чек 1</label>
+                  </div>
+                  <div className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id="checkbox2"
+                      name="checkbox2"
+                      className="mr-2"
+                    // onChange={handleCheckboxChange} 
+                    />
+                    <label htmlFor="checkbox2" className="">Чек 2</label>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="relative flex-1 ">
+
+              <div className="relative flex-1 border-2 border-t-0">
+                <input
+                  id="input19"
+                  type="text"
+                  name="input19"
+                  value={formData.input19}
+                  onChange={handleChange}
+                  className="h-20 w-full mt-10 pl-2 focus:outline-none"
+                // required
+                />
+                <label
+                  htmlFor="input18"
+                  className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+                >
+                  <p>19. Специални споразумения</p>
+                  <p className='pl-3'>Special agreements</p>
+                </label>
+              </div>
+
+              <table className="relative w-full border-2 border-t-0">
+
+                <thead>
+                  <tr>
+                    <th className="border">20. За плащане</th>
+                    <th className="border" colspan="2">Изпращач</th>
+                    <th className="border" colspan="2">Валута</th>
+                    <th className="border" colspan="2">Получател</th>
+                  </tr>
+                </thead>
+
+
+                <tbody>
+                  <tr className='h-[20px]'>
+                    <td className="border">Превозвач</td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                  </tr>
+                  <tr className='h-[20px]'>
+                    <td className="border">Названия</td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                  </tr>
+                  <tr className='h-[20px]'>
+                    <td className="border">Салдо</td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                  </tr>
+                  <tr className='h-[20px]'>
+                    <td className="border">Добавки</td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                  </tr>
+                  <tr className='h-[20px]'>
+                    <td className="border">Други такси</td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                  </tr>
+                  <tr className='h-[70px]'>
+                    <td className="border">Всичко</td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                    <td className="border"></td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </div>
+
+
+          <div className="flex">
+
+            <div className="relative flex flex-1 flex-nowrap border-2 border-t-0 p-1">
+             
+              <div className="flex">
+                <label
+                  htmlFor="input211"
+                  className="mb-2">
+                  21. Изготвена в / Established in
+                </label>
+                <input
+                  id="input211"
+                  type="text"
+                  name="input211"
+                  value={formData.input211}
+                  className="h-3 pl-1 focus:outline-none"
+                  required
+                />
+              </div>
+              <div className="flex">
+                <label
+                  htmlFor="input212"
+                  className="text-[10px]"
+                >
+                  на / on
+                </label>
+                <input
+                  id="input212"
+                  type="text"
+                  name="input212"
+                  value={formData.input212}
+                  className="h-3 pl-1 focus:outline-none"
+                  required
+                />
+              </div>
+
+
+             
+            </div>
+
+            <div className="relative flex-2 border-2 border-t-0 p-1">
+            <input
+                  id="input15"
+                  type="text"
+                  name="input315"
+                  value={formData.input15}
+                  onChange={handleChange}
+                  className="h-3 w-full focus:outline-none"
+                //  required
+                />
+              <label
+                htmlFor="input17"
+                className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+              >
+                <p>15. Наложен платеж / cash on delivery</p>
+              </label>
+
+            </div>
+
+          </div>
+
+
+          <div className="flex h-[100px]">
+
+            <div className="relative flex flex-col justify-between flex-1 border-2 p-1 h-full">
+              <p>22</p>
+              <label
+                className="flex flex-col absolute left-1 top-1.5 text-xs"
+              >
+                <p>Подпис и печат на изпращач</p>
+                <p>Signature or stamp of the sender</p>
+              </label>
+            </div>
+
+            <div className="relative flex-1 border-2 p-1 h-full">
+              <p>23</p>
+              <label
+                htmlFor="input16"
+                className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+              >
+               <p>Подпис и печат на превозвач</p>
+               <p>Signature or stamp of the carrier</p>
+              </label>
+
+            </div>
+
+            <div className="relative flex-1 border-2 p-1 h-full">
+              <p>24</p>
+              <label
+                htmlFor="input16"
+                className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+              >
+                <p>Подпис и печат на получател</p>
+                <p>Signature or stamp of the consignee</p>
+              </label>
+
+            </div>
+
+          </div>
 
 
 
