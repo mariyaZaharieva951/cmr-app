@@ -9,8 +9,10 @@ function App() {
   const [formData, setFormData] = useState({
     input1: '',
     input2: '',
-    input3: '',
-    input4: '',
+    input31: '',
+    input32: '',
+    input41: '',
+    input42: '',
     input5: '',
     input6: '',
     input7: '',
@@ -138,43 +140,43 @@ function App() {
           <div className="flex">
 
             <div className="relative flex-1 border-2 p-1">
-             
+
               <label className="block mb-2 text-xs">
                 <p>3. Разтоварен пункт / Delivery of the goods:</p>
               </label>
 
-              
-              <div className="mb-2 ml-3">
+
+              <div className="ml-3">
                 <label
-                  htmlFor="place"
+                  htmlFor="input31"
                   className="block text-[10px]"
                 >
                   Място / Place
                 </label>
                 <input
-                  id="place"
+                  id="input31"
                   type="text"
-                  name="place"
-                  value={formData.place}
+                  name="input31"
+                  value={formData.input31}
                   onChange={handleChange}
                   className="h-3 w-full focus:outline-none"
                   required
                 />
               </div>
 
-              
+
               <div className='ml-3'>
                 <label
-                  htmlFor="country"
+                  htmlFor="input32"
                   className="block text-[10px]"
                 >
                   Държава / Country
                 </label>
                 <input
-                  id="country"
+                  id="input32"
                   type="text"
-                  name="country"
-                  value={formData.country}
+                  name="input32"
+                  value={formData.input32}
                   onChange={handleChange}
                   className="h-3 w-full focus:outline-none"
                   required
@@ -190,7 +192,7 @@ function App() {
                 value={formData.input17}
                 onChange={handleChange}
                 className="h-20 w-full focus:outline-none"
-                // required
+              // required
               />
               <label
                 htmlFor="input17"
@@ -198,6 +200,98 @@ function App() {
               >
                 <p>17. Следващ превозвач / Successive carners</p>
                 <p className='pl-5'> Име / Name Адрес / Address Държава / Country</p>
+              </label>
+
+            </div>
+
+          </div>
+
+
+          <div className="flex">
+
+            <div className="relative flex-1 border-2">
+              <div className="relative flex-1 p-1">
+                <label className="block mb-2 text-xs">
+                  <p>4. Товарен пункт / Taking over the goods:</p>
+                </label>
+
+
+                <div className="ml-3">
+                  <label
+                    htmlFor="input41"
+                    className="block text-[10px]"
+                  >
+                    Място / Place
+                  </label>
+                  <input
+                    id="input41"
+                    type="text"
+                    name="input41"
+                    value={formData.input41}
+                    onChange={handleChange}
+                    className="h-3 w-full focus:outline-none"
+                    required
+                  />
+                </div>
+
+
+                <div className='ml-3'>
+                  <label
+                    htmlFor="input42"
+                    className="block text-[10px]"
+                  >
+                    Държава / Country
+                  </label>
+                  <input
+                    id="input42"
+                    type="text"
+                    name="input42"
+                    value={formData.input42}
+                    onChange={handleChange}
+                    className="h-3 w-full focus:outline-none"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="relative flex-1 border-t-2">
+              <input
+                id="input5"
+                type="text"
+                name="input5"
+                value={formData.input5}
+                onChange={handleChange}
+                className="h-20 w-full focus:outline-none"
+              // required
+              />
+              <label
+                htmlFor="input5"
+                className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+              >
+                <p>5. Приложени документи</p>
+                <p className='pl-3'>Documents attached</p>
+              </label>
+
+            </div>
+
+            </div>
+
+            <div className="relative flex-1 border-2a">
+              <input
+                id="input18"
+                type="text"
+                name="input18"
+                value={formData.input18}
+                onChange={handleChange}
+                className="h-20 w-full focus:outline-none"
+              // required
+              />
+              <label
+                htmlFor="input18"
+                className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+              >
+                <p>18. Резерви и бележки на превозвача пре вземане на колетите</p>
+                <p className='pl-5'>Carrier`s reservations and observations on taking over the goods</p>
               </label>
 
             </div>
