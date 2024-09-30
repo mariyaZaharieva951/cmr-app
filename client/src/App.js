@@ -255,35 +255,35 @@ function App() {
               </div>
 
               <div className="relative flex-1 border-t-2">
-              <input
-                id="input5"
-                type="text"
-                name="input5"
-                value={formData.input5}
-                onChange={handleChange}
-                className="h-20 w-full focus:outline-none"
-              // required
-              />
-              <label
-                htmlFor="input5"
-                className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
-              >
-                <p>5. Приложени документи</p>
-                <p className='pl-3'>Documents attached</p>
-              </label>
+                <input
+                  id="input5"
+                  type="text"
+                  name="input5"
+                  value={formData.input5}
+                  onChange={handleChange}
+                  className="h-20 w-full focus:outline-none"
+                // required
+                />
+                <label
+                  htmlFor="input5"
+                  className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+                >
+                  <p>5. Приложени документи</p>
+                  <p className='pl-3'>Documents attached</p>
+                </label>
+
+              </div>
 
             </div>
 
-            </div>
-
-            <div className="relative flex-1 border-2a">
+            <div className="relative flex-1 border-2">
               <input
                 id="input18"
                 type="text"
                 name="input18"
                 value={formData.input18}
                 onChange={handleChange}
-                className="h-20 w-full focus:outline-none"
+                className="h-20 w-full mt-10 pl-2 focus:outline-none"
               // required
               />
               <label
@@ -299,6 +299,124 @@ function App() {
           </div>
 
 
+          <div className="flex h-60 border-2">
+
+            <div className='flex flex-col'>
+              <div className="relative flex flex-2 gap-1 p-1">
+
+                <div className="flex-1">
+                  <label className="block text-xs">
+                    <p>6. Знаци и номера</p>
+                    <p className='pl-2'>Marks and Numbers</p>
+                  </label>
+                </div>
+
+
+                <div className="flex-1">
+                  <label className="block text-xs">
+                    <p>7. Брой колети</p>
+                    <p className='pl-2'>Number of packages</p>
+                  </label>
+                </div>
+
+
+                <div className="flex-1">
+                  <label className="block text-xs">
+                    <p>8. Вид опаковка</p>
+                    <p className='pl-2'>Method of packing</p>
+                  </label>
+                </div>
+
+
+                <div className="flex-1">
+                  <label className="block text-xs">
+                    <p>9. Вид на стоката</p>
+                    <p className='pl-2'>Nature of the goods</p>
+                  </label>
+                </div>
+
+              </div>
+
+
+              <div className="flex-1 p-1">
+                <input
+                  id="inputMarks"
+                  type="text"
+                  name="inputMarks"
+                  value={formData.inputMarks}
+                  onChange={handleChange}
+                  className="h-20 w-full focus:outline-none"
+                  required
+                />
+              </div>
+            </div>
+
+
+
+
+
+            <div className="relative flex-1 border-s-2 p-1">
+              <input
+                id="input10"
+                type="text"
+                name="input10"
+                value={formData.input10}
+                onChange={handleChange}
+                className="h-20 w-full mt-[50px] focus:outline-none"
+              // required
+              />
+              <label
+                htmlFor="input10"
+                className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+              >
+                <p>10. Статистически №</p>
+                <p className='pl-3'>Statistical Numer</p>
+              </label>
+
+            </div>
+
+            <div className="relative flex-1 border-s-2 p-1">
+              <input
+                id="input11"
+                type="text"
+                name="input11"
+                value={formData.input11}
+                onChange={handleChange}
+                className="h-20 w-full mt-[50px] focus:outline-none"
+              // required
+              />
+              <label
+                htmlFor="input11"
+                className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+              >
+                <p>11. Тегло брутно, kg</p>
+                <p className='pl-3'>Gross weight, kg</p>
+              </label>
+
+            </div>
+
+            <div className="relative flex-1 border-s-2 p-1">
+              <input
+                id="input12"
+                type="text"
+                name="input12"
+                value={formData.input12}
+                onChange={handleChange}
+                className="h-20 w-full mt-[50px] focus:outline-none"
+              //required
+              />
+              <label
+                htmlFor="input12"
+                className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+              >
+                <p>12. Обем m3</p>
+                <p className='pl-3'>Volume m3</p>
+              </label>
+
+            </div>
+
+          </div>
+
 
 
 
@@ -307,8 +425,8 @@ function App() {
             <button className="border-2" type="submit">Generate CMR</button>
           </div>
         </form>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 }
 
