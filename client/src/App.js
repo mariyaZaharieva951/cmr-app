@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import React, { useState } from 'react';
-// import './App.css';
+import './App.css';
 
 
 
@@ -45,30 +45,173 @@ function App() {
 
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="w-full max-w-md bg-white p-8">
-        <h1 className="text-2xl font-bold mb-6 text-center">CMR Form</h1>
+      <div className="w-[793.7px] h-[1122.5px] bg-white p-8">
+        {/* <h1 className="text-2xl font-bold mb-6 text-center">CMR Form</h1> */}
 
         <form onSubmit={handleSubmit}>
-          <div className="relative mb-6 border-2">
-            <input
-              id="input1"
-              type="text"
-              name="input1"
-              value={formData.input1}
-              onChange={handleChange}
-              className="h-40 w-full border-b-2 focus:outline-none"
-              required
-            />
-            <label
-              htmlFor="input1"
-              className="absolute left-1 top-1.5 text-xs"
-            >
-              Изпращач (име, адрес, държава)
-            </label>
+          <div className="flex">
+
+            <div className="relative flex-1 border-2 p-1">
+              <input
+                id="input1"
+                type="text"
+                name="input1"
+                value={formData.input1}
+                onChange={handleChange}
+                className="h-40 w-full focus:outline-none"
+                required
+              />
+              <label
+                htmlFor="input1"
+                className="flex flex-col absolute left-1 top-1.5 text-xs"
+              >
+                <p>1. Изпращач (име, адрес, държава)</p>
+                <p className='pl-4'>Sender (name,address, country)</p>
+              </label>
+            </div>
+
+            <div className="relative flex-1 border-2 p-1">
+              <div className="h-20 w-full focus:outline-none"></div>
+              <label
+                htmlFor="input2"
+                className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+              >
+                <p className="text-transform: uppercase">международна товарителница №</p>
+                <p className="text-transform: uppercase">international consignment note</p>
+                <p className="text-center pt-2">CMR</p>
+              </label>
+              <div className="flex gap-1 ">
+                <p className="text-[10px]">Този превоз, независимо от всяка противна клауза, е додчинен на Конвенцията относно договора за международен превоз на стоки по пътищата (CMR)
+                </p>
+                <p className="text-[10px]">This carriage sunject, notwishstanding any clause to the country to the Convention on the contract for the international Carriage of goods by the road (CMR)
+                </p>
+              </div>
+            </div>
+
           </div>
 
-          
-        <button type="submit">Generate CMR</button>
+
+          <div className="flex">
+
+            <div className="relative flex-1 border-2 p-1">
+              <input
+                id="input2"
+                type="text"
+                name="input2"
+                value={formData.input2}
+                onChange={handleChange}
+                className="h-20 w-full focus:outline-none"
+                required
+              />
+              <label
+                htmlFor="input2"
+                className="flex flex-col absolute left-1 top-1.5 text-xs"
+              >
+                <p>2. Получател (име, адрес, държава)</p>
+                <p className='pl-5'>Consignee (name,address, country)</p>
+              </label>
+            </div>
+
+            <div className="relative flex-1 border-2 p-1">
+              <input
+                id="input16"
+                type="text"
+                name="input16"
+                value={formData.input16}
+                onChange={handleChange}
+                className="h-20 w-full focus:outline-none"
+                required
+              />
+              <label
+                htmlFor="input16"
+                className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+              >
+                <p>16. Превозвач (име, адрес, държава, други референции)</p>
+                <p className='pl-5'>Carner (name,address, country, other refferences)</p>
+              </label>
+
+            </div>
+
+          </div>
+
+
+          <div className="flex">
+
+            <div className="relative flex-1 border-2 p-1">
+             
+              <label className="block mb-2 text-xs">
+                <p>3. Разтоварен пункт / Delivery of the goods:</p>
+              </label>
+
+              
+              <div className="mb-2 ml-3">
+                <label
+                  htmlFor="place"
+                  className="block text-[10px]"
+                >
+                  Място / Place
+                </label>
+                <input
+                  id="place"
+                  type="text"
+                  name="place"
+                  value={formData.place}
+                  onChange={handleChange}
+                  className="h-3 w-full focus:outline-none"
+                  required
+                />
+              </div>
+
+              
+              <div className='ml-3'>
+                <label
+                  htmlFor="country"
+                  className="block text-[10px]"
+                >
+                  Държава / Country
+                </label>
+                <input
+                  id="country"
+                  type="text"
+                  name="country"
+                  value={formData.country}
+                  onChange={handleChange}
+                  className="h-3 w-full focus:outline-none"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="relative flex-1 border-2 p-1">
+              <input
+                id="input17"
+                type="text"
+                name="input17"
+                value={formData.input17}
+                onChange={handleChange}
+                className="h-20 w-full focus:outline-none"
+                // required
+              />
+              <label
+                htmlFor="input17"
+                className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+              >
+                <p>17. Следващ превозвач / Successive carners</p>
+                <p className='pl-5'> Име / Name Адрес / Address Държава / Country</p>
+              </label>
+
+            </div>
+
+          </div>
+
+
+
+
+
+
+          <div className="text-end pt-2">
+            <button className="border-2" type="submit">Generate CMR</button>
+          </div>
         </form>
       </div>
     </div>
