@@ -47,45 +47,46 @@ function App() {
 
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="w-[793.7px] h-[1122.5px] bg-white p-8">
+      <div className="w-[793.7px] h-[1122.5px] border-2 bg-white p-8">
         {/* <h1 className="text-2xl font-bold mb-6 text-center">CMR Form</h1> */}
 
         <form onSubmit={handleSubmit}>
-          <div className="flex">
+          <div className="flex h-[120px]">
 
             <div className="relative flex-1 border-2 p-1">
-              <input
+              <textarea
                 id="input1"
                 type="text"
                 name="input1"
                 value={formData.input1}
+                rows={4}
                 onChange={handleChange}
-                className="h-40 w-full focus:outline-none"
+                className="mt-10 w-full focus:outline-none text-[9px]"
                 required
               />
               <label
                 htmlFor="input1"
-                className="flex flex-col absolute left-1 top-1.5 text-xs"
+                className="flex flex-col absolute left-1 top-1"
               >
                 <p>1. Изпращач (име, адрес, държава)</p>
                 <p className='pl-4'>Sender (name,address, country)</p>
               </label>
             </div>
 
-            <div className="relative flex-1 border-2 p-1">
-              <div className="h-20 w-full focus:outline-none"></div>
+            <div className="relative h-full flex flex-col flex-1 border-2 p-1 gap-2 items-strech">
+              {/* <div className="w-full focus:outline-none"></div> */}
               <label
-                htmlFor="input2"
-                className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+                // htmlFor="input2"
+                className="flex flex-col w-full left-1 top-1"
               >
                 <p className="text-transform: uppercase">международна товарителница №</p>
                 <p className="text-transform: uppercase">international consignment note</p>
                 <p className="text-center pt-2">CMR</p>
               </label>
-              <div className="flex gap-1 ">
-                <p className="text-[10px]">Този превоз, независимо от всяка противна клауза, е додчинен на Конвенцията относно договора за международен превоз на стоки по пътищата (CMR)
+              <div className="flex gap-1">
+                <p className="text-[8px]">Този превоз, независимо от всяка противна клауза, е додчинен на Конвенцията относно договора за международен превоз на стоки по пътищата (CMR)
                 </p>
-                <p className="text-[10px]">This carriage sunject, notwishstanding any clause to the country to the Convention on the contract for the international Carriage of goods by the road (CMR)
+                <p className="text-[8px]">This carriage sunject, notwishstanding any clause to the country to the Convention on the contract for the international Carriage of goods by the road (CMR)
                 </p>
               </div>
             </div>
@@ -93,16 +94,17 @@ function App() {
           </div>
 
 
-          <div className="flex">
+          <div className="flex h-[90px]">
 
             <div className="relative flex-1 border-2 p-1">
-              <input
+              <textarea
                 id="input2"
                 type="text"
                 name="input2"
                 value={formData.input2}
                 onChange={handleChange}
-                className="h-20 w-full focus:outline-none"
+                rows={3}
+                className="h-15 mt-10 w-full focus:outline-none text-[9px]"
                 required
               />
               <label
@@ -115,13 +117,14 @@ function App() {
             </div>
 
             <div className="relative flex-1 border-2 p-1">
-              <input
+              <textarea
                 id="input16"
                 type="text"
                 name="input16"
                 value={formData.input16}
                 onChange={handleChange}
-                className="h-20 w-full focus:outline-none"
+                rows={3}
+                className="h-15 mt-10 w-full focus:outline-none text-[9px]"
                 required
               />
               <label
@@ -137,48 +140,50 @@ function App() {
           </div>
 
 
-          <div className="flex">
+          <div className="flex h-[90px]">
 
             <div className="relative flex-1 border-2 p-1">
 
-              <label className="block mb-2 text-xs">
+              <label className="block text-xs">
                 <p>3. Разтоварен пункт / Delivery of the goods:</p>
               </label>
 
 
-              <div className="ml-3">
+              <div className="flex gap-1 ml-3 h-[30px]">
                 <label
                   htmlFor="input31"
-                  className="block text-[10px]"
+                  className="text-nowrap"
                 >
                   Място / Place
                 </label>
-                <input
+                <textarea
                   id="input31"
                   type="text"
+                  rows={1}
                   name="input31"
                   value={formData.input31}
                   onChange={handleChange}
-                  className="h-3 w-full focus:outline-none"
+                  className="w-full focus:outline-none text-[9px]"
                   required
                 />
               </div>
 
 
-              <div className='ml-3'>
+              <div className='flex gap-1 ml-3 h-[30px]'>
                 <label
                   htmlFor="input32"
-                  className="block text-[10px]"
+                  className="text-nowrap"
                 >
                   Държава / Country
                 </label>
-                <input
+                <textarea
                   id="input32"
                   type="text"
+                  rows={1}
                   name="input32"
                   value={formData.input32}
                   onChange={handleChange}
-                  className="h-3 w-full focus:outline-none"
+                  className="w-full focus:outline-none text-[9px]"
                   required
                 />
               </div>
@@ -207,61 +212,64 @@ function App() {
           </div>
 
 
-          <div className="flex">
+          <div className="flex h-[150px]">
 
             <div className="relative flex-1 border-2">
-              <div className="relative flex-1 p-1">
+              <div className="relative flex-1 p-1 h-[90px]">
                 <label className="block mb-2 text-xs">
                   <p>4. Товарен пункт / Taking over the goods:</p>
                 </label>
 
 
-                <div className="ml-3">
+                <div className="flex gap-1 ml-3 h-[30px]">
                   <label
                     htmlFor="input41"
-                    className="block text-[10px]"
+                    className="text-nowrap"
                   >
                     Място / Place
                   </label>
-                  <input
+                  <textarea
                     id="input41"
                     type="text"
+                    rows={1}
                     name="input41"
                     value={formData.input41}
                     onChange={handleChange}
-                    className="h-3 w-full focus:outline-none"
+                    className="w-full focus:outline-none text-[9px]"
                     required
                   />
                 </div>
 
 
-                <div className='ml-3'>
+                <div className='flex gap-1 ml-3 h-[30px]'>
                   <label
                     htmlFor="input42"
-                    className="block text-[10px]"
+                    className="text-nowrap"
                   >
                     Държава / Country
                   </label>
-                  <input
+                  <textarea
                     id="input42"
                     type="text"
+                    rows={1}
                     name="input42"
                     value={formData.input42}
                     onChange={handleChange}
-                    className="h-3 w-full focus:outline-none"
+                    className="h-3 w-full focus:outline-none text-[9px]"
                     required
                   />
                 </div>
               </div>
 
-              <div className="relative flex-1 border-t-2">
-                <input
+              <div className="relative flex-1 border-t-2 h-[60px]">
+                <textarea
                   id="input5"
                   type="text"
+                  rows={1}
                   name="input5"
                   value={formData.input5}
                   onChange={handleChange}
-                  className="h-20 w-full focus:outline-none"
+                  className="w-full mt-8 focus:outline-none text-[9px]"
                 // required
                 />
                 <label
