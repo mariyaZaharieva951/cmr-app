@@ -140,16 +140,16 @@ function App() {
           </div>
 
 
-          <div className="flex h-[90px]">
+          <div className="flex h-[80px]">
 
             <div className="relative flex-1 border-2 p-1">
 
-              <label className="block text-xs">
+              <label className="block text-xs mb-1">
                 <p>3. Разтоварен пункт / Delivery of the goods:</p>
               </label>
 
 
-              <div className="flex gap-1 ml-3 h-[30px]">
+              <div className="flex gap-1 ml-3 h-[20px]">
                 <label
                   htmlFor="input31"
                   className="text-nowrap"
@@ -169,7 +169,7 @@ function App() {
               </div>
 
 
-              <div className='flex gap-1 ml-3 h-[30px]'>
+              <div className='flex gap-1 ml-3 h-[20px]'>
                 <label
                   htmlFor="input32"
                   className="text-nowrap"
@@ -190,13 +190,14 @@ function App() {
             </div>
 
             <div className="relative flex-1 border-2 p-1">
-              <input
+              <textarea
                 id="input17"
                 type="text"
+                rows={1}
                 name="input17"
                 value={formData.input17}
                 onChange={handleChange}
-                className="h-20 w-full focus:outline-none"
+                className="mt-10 w-full focus:outline-none text-[9px]"
               // required
               />
               <label
@@ -215,13 +216,13 @@ function App() {
           <div className="flex h-[150px]">
 
             <div className="relative flex-1 border-2">
-              <div className="relative flex-1 p-1 h-[90px]">
-                <label className="block mb-2 text-xs">
+              <div className="relative flex-1 p-1 h-[80px]">
+                <label className="block mt-2 text-xs">
                   <p>4. Товарен пункт / Taking over the goods:</p>
                 </label>
 
 
-                <div className="flex gap-1 ml-3 h-[30px]">
+                <div className="flex gap-1 ml-3 h-[20px]">
                   <label
                     htmlFor="input41"
                     className="text-nowrap"
@@ -241,7 +242,7 @@ function App() {
                 </div>
 
 
-                <div className='flex gap-1 ml-3 h-[30px]'>
+                <div className='flex gap-1 ml-3 h-[20px]'>
                   <label
                     htmlFor="input42"
                     className="text-nowrap"
@@ -269,7 +270,7 @@ function App() {
                   name="input5"
                   value={formData.input5}
                   onChange={handleChange}
-                  className="w-full mt-8 focus:outline-none text-[9px]"
+                  className="w-full mt-10 focus:outline-none text-[9px]"
                 // required
                 />
                 <label
@@ -285,13 +286,14 @@ function App() {
             </div>
 
             <div className="relative flex-1 border-2">
-              <input
+              <textarea
                 id="input18"
                 type="text"
+                rows={5}
                 name="input18"
                 value={formData.input18}
                 onChange={handleChange}
-                className="h-20 w-full mt-10 pl-2 focus:outline-none"
+                className="mt-10 w-full mt-10 pl-2 focus:outline-none text-[9px]"
               // required
               />
               <label
@@ -307,7 +309,7 @@ function App() {
           </div>
 
 
-          <div className="flex h-60 border-2">
+          <div className="flex h-[230px] border-2">
 
             <div className='flex flex-col'>
               <div className="relative flex flex-2 gap-1 p-1">
@@ -347,30 +349,29 @@ function App() {
 
 
               <div className="flex-1 p-1">
-                <input
+                <textarea
                   id="inputMarks"
                   type="text"
+                  rows={2}
                   name="inputMarks"
                   value={formData.inputMarks}
                   onChange={handleChange}
-                  className="h-20 w-full focus:outline-none"
+                  className="mt-[40px] w-full focus:outline-none text-[10px]"
                   required
                 />
               </div>
             </div>
 
 
-
-
-
             <div className="relative flex-1 border-s-2 p-1">
-              <input
+              <textarea
                 id="input10"
                 type="text"
+                rows={1}
                 name="input10"
                 value={formData.input10}
                 onChange={handleChange}
-                className="h-20 w-full mt-[50px] focus:outline-none"
+                className="w-full mt-[100px] focus:outline-none text-[10px]"
               // required
               />
               <label
@@ -384,13 +385,14 @@ function App() {
             </div>
 
             <div className="relative flex-1 border-s-2 p-1">
-              <input
+              <textarea
                 id="input11"
                 type="text"
+                rows={1}
                 name="input11"
                 value={formData.input11}
                 onChange={handleChange}
-                className="h-20 w-full mt-[50px] focus:outline-none"
+                className="w-full mt-[100px] focus:outline-none text-[10px]"
               // required
               />
               <label
@@ -404,13 +406,14 @@ function App() {
             </div>
 
             <div className="relative flex-1 border-s-2 p-1">
-              <input
+              <textarea
                 id="input12"
                 type="text"
+                rows={1}
                 name="input12"
                 value={formData.input12}
                 onChange={handleChange}
-                className="h-20 w-full mt-[50px] focus:outline-none"
+                className="w-full mt-[100px] focus:outline-none text-[10px]"
               //required
               />
               <label
@@ -426,9 +429,9 @@ function App() {
           </div>
 
 
-          <div className="flex border-2">
+          <div className="flex h-[230px] border-2 border-r-0">
 
-            <div className="relative flex flex-col border-b-2">
+            <div className="relative flex flex-col">
 
               <div className="relative flex-1 p-1">
                 <input
@@ -494,21 +497,21 @@ function App() {
             <div className="relative flex-1 ">
 
               <div className="relative flex-1 border-2 border-t-0">
-                <input
+                <textarea
                   id="input19"
                   type="text"
+                  rows={1}
                   name="input19"
                   value={formData.input19}
                   onChange={handleChange}
-                  className="h-20 w-full mt-10 pl-2 focus:outline-none"
+                  className="w-full mt-9 pl-2 focus:outline-none text-[9px]"
                 // required
                 />
                 <label
                   htmlFor="input18"
                   className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
                 >
-                  <p>19. Специални споразумения</p>
-                  <p className='pl-3'>Special agreements</p>
+                  <p>19. Специални споразумения / Special agreements</p>
                 </label>
               </div>
 
@@ -524,8 +527,8 @@ function App() {
                 </thead>
 
 
-                <tbody>
-                  <tr className='h-[20px]'>
+                <tbody className='border-b-2'>
+                  <tr className='h-[12px]'>
                     <td className="border">Превозвач</td>
                     <td className="border"></td>
                     <td className="border"></td>
@@ -534,7 +537,7 @@ function App() {
                     <td className="border"></td>
                     <td className="border"></td>
                   </tr>
-                  <tr className='h-[20px]'>
+                  <tr className='h-[12px]'>
                     <td className="border">Названия</td>
                     <td className="border"></td>
                     <td className="border"></td>
@@ -543,7 +546,7 @@ function App() {
                     <td className="border"></td>
                     <td className="border"></td>
                   </tr>
-                  <tr className='h-[20px]'>
+                  <tr className='h-[12px]'>
                     <td className="border">Салдо</td>
                     <td className="border"></td>
                     <td className="border"></td>
@@ -552,7 +555,7 @@ function App() {
                     <td className="border"></td>
                     <td className="border"></td>
                   </tr>
-                  <tr className='h-[20px]'>
+                  <tr className='h-[12px]'>
                     <td className="border">Добавки</td>
                     <td className="border"></td>
                     <td className="border"></td>
@@ -561,7 +564,7 @@ function App() {
                     <td className="border"></td>
                     <td className="border"></td>
                   </tr>
-                  <tr className='h-[20px]'>
+                  <tr className='h-[12px]'>
                     <td className="border">Други такси</td>
                     <td className="border"></td>
                     <td className="border"></td>
@@ -587,9 +590,9 @@ function App() {
           </div>
 
 
-          <div className="flex">
+          <div className="flex h-[47px]">
 
-            <div className="relative flex flex-1 flex-nowrap border-2 border-t-0 p-1">
+            <div className="relative flex flex-1 flex-nowrap border-2 p-1">
              
               <div className="flex">
                 <label
@@ -597,28 +600,30 @@ function App() {
                   className="mb-2">
                   21. Изготвена в / Established in
                 </label>
-                <input
+                <textarea
                   id="input211"
                   type="text"
+                  rows={1}
                   name="input211"
                   value={formData.input211}
-                  className="h-3 pl-1 focus:outline-none"
+                  className=" pl-1 focus:outline-none text-[9px] font-bold"
                   required
                 />
               </div>
               <div className="flex">
                 <label
                   htmlFor="input212"
-                  className="text-[10px]"
+                  className=""
                 >
                   на / on
                 </label>
-                <input
+                <textarea
                   id="input212"
                   type="text"
+                  rows={1}
                   name="input212"
                   value={formData.input212}
-                  className="h-3 pl-1 focus:outline-none"
+                  className="pl-1 focus:outline-none text-[9px] font-bold"
                   required
                 />
               </div>
@@ -627,7 +632,7 @@ function App() {
              
             </div>
 
-            <div className="relative flex-2 border-2 border-t-0 p-1">
+            <div className="relative flex-2 border-2 p-1">
             <input
                   id="input15"
                   type="text"
@@ -652,20 +657,20 @@ function App() {
           <div className="flex h-[100px]">
 
             <div className="relative flex flex-col justify-between flex-1 border-2 p-1 h-full">
-              <p>22</p>
+              <p>22.</p>
               <label
-                className="flex flex-col absolute left-1 top-1.5 text-xs"
+                className="flex flex-col left-1 "
               >
                 <p>Подпис и печат на изпращач</p>
                 <p>Signature or stamp of the sender</p>
               </label>
             </div>
 
-            <div className="relative flex-1 border-2 p-1 h-full">
-              <p>23</p>
+            <div className="relative flex flex-col justify-between flex-1 border-2 p-1 h-full">
+              <p>23.</p>
               <label
                 htmlFor="input16"
-                className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+                className="flex flex-col w-full left-1"
               >
                <p>Подпис и печат на превозвач</p>
                <p>Signature or stamp of the carrier</p>
@@ -673,11 +678,11 @@ function App() {
 
             </div>
 
-            <div className="relative flex-1 border-2 p-1 h-full">
-              <p>24</p>
+            <div className="relative flex flex-col justify-between flex-1 border-2 p-1 h-full">
+              <p>24.</p>
               <label
                 htmlFor="input16"
-                className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
+                className="flex flex-col w-full left-1"
               >
                 <p>Подпис и печат на получател</p>
                 <p>Signature or stamp of the consignee</p>
