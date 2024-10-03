@@ -34,14 +34,36 @@ function App() {
     input23: '',
   });
 
-  const handleChange = (e) => {
+  const handleChange =  (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const  handleSubmit = async (e) => {
     e.preventDefault();
-    //изпращане към сървъра
+    debugger
     console.log(formData);
+    
+    try {
+      const response = await fetch('http://localhost:5000/generate-pdf', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData), 
+      });
+  
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(new Blob([blob]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'cmr.pdf');
+      document.body.appendChild(link);
+      link.click();
+      link.parentNode.removeChild(link);
+    } catch (err) {
+      console.error('Error generating PDF:', err);
+    }
+
   };
 
 
