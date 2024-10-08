@@ -38,32 +38,34 @@ function App() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const  handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    debugger
     console.log(formData);
     
     try {
-      const response = await fetch('http://localhost:5000/generate-pdf', {
+      const response = await fetch('https://crispy-broccoli-x77v6rw7x9q36qwv-5000.app.github.dev/generate-pdf', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData), 
       });
+      if (!response.ok) {
+        console.log('ERROR')
+        throw new Error('Network response was not ok');
+      }
   
       const blob = await response.blob();
-      const url = window.URL.createObjectURL(new Blob([blob]));
+      const url = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', 'cmr.pdf');
+      link.setAttribute('download', 'cmr.pdf'); 
       document.body.appendChild(link);
       link.click();
       link.parentNode.removeChild(link);
     } catch (err) {
       console.error('Error generating PDF:', err);
     }
-
   };
 
 
