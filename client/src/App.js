@@ -15,9 +15,6 @@ function App() {
     input42: '',
     input5: '',
     input6: '',
-    input7: '',
-    input8: '',
-    input9: '',
     input10: '',
     input11: '',
     input12: '',
@@ -29,9 +26,7 @@ function App() {
     input18: '',
     input19: '',
     input20: '',
-    input21: '',
-    input22: '',
-    input23: '',
+    input21: ''
   });
 
   const handleChange =  (e) => {
@@ -43,12 +38,15 @@ function App() {
     console.log(formData);
     
     try {
-      const response = await fetch('https://crispy-broccoli-x77v6rw7x9q36qwv-5000.app.github.dev/generate-pdf', {
+      console.log('start')
+      const response = await fetch('https://localhost:5000', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData), 
+        mode: 'cors',
+        credentials: 'include',
       });
       if (!response.ok) {
         console.log('ERROR')
@@ -98,9 +96,7 @@ function App() {
             </div>
 
             <div className="relative h-full flex flex-col flex-1 border-2 p-1 gap-2 items-strech">
-              {/* <div className="w-full focus:outline-none"></div> */}
               <label
-                // htmlFor="input2"
                 className="flex flex-col w-full left-1 top-1"
               >
                 <p className="text-transform: uppercase">международна товарителница №</p>
@@ -374,11 +370,11 @@ function App() {
 
               <div className="flex-1 p-1">
                 <textarea
-                  id="inputMarks"
+                  id="input6"
                   type="text"
                   rows={2}
-                  name="inputMarks"
-                  value={formData.inputMarks}
+                  name="input6"
+                  value={formData.input6}
                   onChange={handleChange}
                   className="mt-[40px] w-full focus:outline-none text-[10px]"
                   required
@@ -481,7 +477,7 @@ function App() {
                   type="text"
                   name="input14"
                   value={formData.input14}
-                  onChange={handleChange}
+                  // onChange={handleChange}
                   className=" w-full mt-3 focus:outline-none"
                 // required
                 />
@@ -527,12 +523,12 @@ function App() {
                   rows={1}
                   name="input19"
                   value={formData.input19}
-                  onChange={handleChange}
+                  // onChange={handleChange}
                   className="w-full mt-9 pl-2 focus:outline-none text-[9px]"
                 // required
                 />
                 <label
-                  htmlFor="input18"
+                  htmlFor="input19"
                   className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
                 >
                   <p>19. Специални споразумения / Special agreements</p>
@@ -544,9 +540,9 @@ function App() {
                 <thead>
                   <tr>
                     <th className="border">20. За плащане</th>
-                    <th className="border" colspan="2">Изпращач</th>
-                    <th className="border" colspan="2">Валута</th>
-                    <th className="border" colspan="2">Получател</th>
+                    <th className="border" colSpan="2">Изпращач</th>
+                    <th className="border" colSpan="2">Валута</th>
+                    <th className="border" colSpan="2">Получател</th>
                   </tr>
                 </thead>
 
@@ -631,7 +627,7 @@ function App() {
                   name="input211"
                   value={formData.input211}
                   className=" pl-1 focus:outline-none text-[9px] font-bold"
-                  required
+                  //required
                 />
               </div>
               <div className="flex">
@@ -648,7 +644,7 @@ function App() {
                   name="input212"
                   value={formData.input212}
                   className="pl-1 focus:outline-none text-[9px] font-bold"
-                  required
+                  //required
                 />
               </div>
 
@@ -660,14 +656,14 @@ function App() {
             <input
                   id="input15"
                   type="text"
-                  name="input315"
+                  name="input15"
                   value={formData.input15}
                   onChange={handleChange}
                   className="h-3 w-full focus:outline-none"
                 //  required
                 />
               <label
-                htmlFor="input17"
+                htmlFor="input15"
                 className="flex flex-col w-full absolute left-1 top-1.5 text-xs"
               >
                 <p>15. Наложен платеж / cash on delivery</p>
@@ -693,7 +689,6 @@ function App() {
             <div className="relative flex flex-col justify-between flex-1 border-2 p-1 h-full">
               <p>23.</p>
               <label
-                htmlFor="input16"
                 className="flex flex-col w-full left-1"
               >
                <p>Подпис и печат на превозвач</p>
@@ -705,7 +700,6 @@ function App() {
             <div className="relative flex flex-col justify-between flex-1 border-2 p-1 h-full">
               <p>24.</p>
               <label
-                htmlFor="input16"
                 className="flex flex-col w-full left-1"
               >
                 <p>Подпис и печат на получател</p>
